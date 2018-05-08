@@ -13,8 +13,9 @@ import numpy as np
 totspace = 0
 
 # conditions
-cmd = 'du -sh /data*/apertif/17*'
+cmd = 'du -s /data*/apertif/17*'
 print 'Command: %s' % cmd
+print 'Running command now...'
 results = os.popen(cmd)
 for x in results:
 	totspace = totspace + float(x.split()[0])
